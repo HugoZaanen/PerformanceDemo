@@ -50,6 +50,15 @@ namespace PerformanceDemo
             return g * g;
         }
 
+        Task<int> KwadraatAsync(int getal)
+        {
+            var taak = new Task<int>(() => Kwadraat(getal));
+
+            taak.Start();
+
+            return taak;
+        }
+
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             int getal = int.Parse(txt.Text);
@@ -61,12 +70,20 @@ namespace PerformanceDemo
 
             taak.Start();
 
+            lbx.Items.Add($"Begin met kwadraat {(getal)} berekenen");
             await taak;
 
             lbx.Items.Add($"Het Kwadraat van {getal} is {taak.Result}");
             sw.Stop();
 
             MessageBox.Show(sw.ElapsedMilliseconds.ToString());
+        }
+
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            int getal = int.Parse(txt.Text);
+
+            int antwoord = await KwadraatAsync(getal);
         }
     }
 }

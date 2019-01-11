@@ -8,9 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="52,56,0,0" Click="Button_Click"/>
-        <TextBox x:Name="txt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Margin="52,133,0,0"/>
+        <TextBox x:Name="txt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" Margin="52,133,0,0"/>
         <Button Content="bereken kwadraat" HorizontalAlignment="Left" VerticalAlignment="Top" Width="146" Margin="52,92,0,0" Click="Button_Click_1"/>
-        <ListBox x:Name="lbx" HorizontalAlignment="Left" Height="149" Margin="52,198,0,0" VerticalAlignment="Top" Width="166"/>
+        <ListBox x:Name="lbx" HorizontalAlignment="Left" Height="149" Margin="52,198,0,0" VerticalAlignment="Top" Width="267"/>
+        <Button Content="Bereken Kwadraat 2de manier" HorizontalAlignment="Left" Margin="225,92,0,0" VerticalAlignment="Top" Width="201" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
